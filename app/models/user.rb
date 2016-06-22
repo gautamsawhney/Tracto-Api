@@ -17,6 +17,7 @@ def self.find_for_database_authentication(warden_conditions)
         :recoverable, :rememberable, :trackable
 
   # Autocode: Relationships
+  has_many :comments
   has_many :posts
   has_many :restaurants
 
