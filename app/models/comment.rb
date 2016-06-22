@@ -1,10 +1,10 @@
 class Comment < ApplicationRecord
 
   # Autocode: Callbacks
-    # Autocode: Relationships
+  # Autocode: Relationships
   belongs_to :user
   belongs_to :post
-    # Autocode: Accept Nested Attributes
+  # Autocode: Accept Nested Attributes
 
   # File Upload
 

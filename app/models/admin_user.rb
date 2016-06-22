@@ -5,8 +5,8 @@ class AdminUser < ApplicationRecord
   :recoverable, :rememberable, :trackable, :validatable
 
   # Autocode: Callbacks
-    # Autocode: Relationships
-    # Autocode: Accept Nested Attributes
+  # Autocode: Relationships
+  # Autocode: Accept Nested Attributes
 
   # File Upload
 

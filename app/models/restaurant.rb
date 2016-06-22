@@ -1,10 +1,10 @@
 class Restaurant < ApplicationRecord
 
   # Autocode: Callbacks
-    # Autocode: Relationships
+  # Autocode: Relationships
   has_many :posts
   belongs_to :user
-    # Autocode: Accept Nested Attributes
+  # Autocode: Accept Nested Attributes
 
   # File Upload
 
