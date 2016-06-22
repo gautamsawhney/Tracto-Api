@@ -12,6 +12,7 @@ class Post < ApplicationRecord
   # File Upload
 
   # Autocode: Validations
+  validates_presence_of :body
 
 	# Soft Destroy
 
