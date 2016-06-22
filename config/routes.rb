@@ -10,10 +10,11 @@ Rails.application.routes.draw do
   # Api
   namespace :api do 
     namespace :v1 do 
+      resources :discounts do
+      end
       resources :restaurants do
       end
       resources :posts do
-        resources :comments
       end
       resources :users do
       end
