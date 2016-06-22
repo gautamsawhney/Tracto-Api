@@ -28,6 +28,7 @@ def self.find_for_database_authentication(warden_conditions)
   has_attached_file :image
 
   # Autocode: Validations
+  validates_attachment_presence :image
   validates_attachment_content_type :image, :content_type => /./
   # You can change the content type as follows
   # Image: /Aimage/.*Z/
