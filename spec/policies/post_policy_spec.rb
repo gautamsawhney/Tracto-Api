@@ -14,6 +14,10 @@ it { should permit_action(:update) }
 it { should permit_action(:show) }
 it { should permit_action(:create) }
                           # Attribute Specs :: Mod
+it { should permit_mass_assignment_of(:restaurant_id) }
+it { should permit_mass_assignment_of(:user_id) }
+it { should permit_mass_assignment_of(:title) }
+it { should permit_mass_assignment_of(:body) }
                         end
 context "being a/an restaurant_owner" do
                           let(:user) {  User.create('roles' => 'restaurant_owner', 'email' => 'first@first.com', 'password' => 'abcdabcd') }
@@ -23,6 +27,10 @@ it { should permit_action(:update) }
 it { should permit_action(:show) }
 it { should permit_action(:create) }
                           # Attribute Specs :: RestaurantOwner
+it { should permit_mass_assignment_of(:restaurant_id) }
+it { should permit_mass_assignment_of(:user_id) }
+it { should permit_mass_assignment_of(:title) }
+it { should permit_mass_assignment_of(:body) }
                         end
 context "being a/an admin" do
                           let(:user) {  User.create('roles' => 'admin', 'email' => 'first@first.com', 'password' => 'abcdabcd') }
@@ -32,6 +40,10 @@ it { should permit_action(:update) }
 it { should permit_action(:show) }
 it { should permit_action(:create) }
                           # Attribute Specs :: Admin
+it { should permit_mass_assignment_of(:restaurant_id) }
+it { should permit_mass_assignment_of(:user_id) }
+it { should permit_mass_assignment_of(:title) }
+it { should permit_mass_assignment_of(:body) }
                         end
 
 end
