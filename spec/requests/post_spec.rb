@@ -4,7 +4,7 @@ require 'rails_helper'
 
     describe "Create" do
 
-      let(:user) { FactoryGirl.create :user } #create
+      let(:user) { FactoryGirl.create :admin } #create
       before(:each) do
         headers = { "CONTENT_TYPE" => "application/json" } #create
       @post_params = FactoryGirl.build(:post, user: user).attributes
@@ -26,7 +26,7 @@ require 'rails_helper'
 
     describe "Index" do 
 
-      let(:user) { FactoryGirl.create :user } #index
+      let(:user) { FactoryGirl.create :admin } #index
       before(:each) do
         headers = { "CONTENT_TYPE" => "application/json" }
         post "/login", '{ "user": { "email": "'+user.email+'", "password": "12345678" } }', headers
@@ -55,7 +55,7 @@ require 'rails_helper'
 
     describe "Show" do 
 
-      let(:user) { FactoryGirl.create :user } #show
+      let(:user) { FactoryGirl.create :admin } #show
       before(:each) do
         headers = { "CONTENT_TYPE" => "application/json" }
         post "/login", '{ "user": { "email": "'+user.email+'", "password": "12345678" } }', headers
@@ -75,7 +75,7 @@ require 'rails_helper'
 
     describe "Destroy" do 
 
-      let(:user) { FactoryGirl.create :user } #destroy
+      let(:user) { FactoryGirl.create :admin } #destroy
       before(:each) do
         headers = { "CONTENT_TYPE" => "application/json" }
         post "/login", '{ "user": { "email": "'+user.email+'", "password": "12345678" } }', headers
@@ -96,7 +96,7 @@ require 'rails_helper'
 
     describe "Update" do 
 
-      let(:user) { FactoryGirl.create :user } #update
+      let(:user) { FactoryGirl.create :admin } #update
       before(:each) do
         headers = { "CONTENT_TYPE" => "application/json" }
         post "/login", '{ "user": { "email": "'+user.email+'", "password": "12345678" } }', headers
