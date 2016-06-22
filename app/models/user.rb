@@ -22,6 +22,7 @@ def self.find_for_database_authentication(warden_conditions)
   has_many :identities, dependent: :destroy
 
   # File Upload
+  has_attached_file :image
 
   # Autocode: Validations
 
