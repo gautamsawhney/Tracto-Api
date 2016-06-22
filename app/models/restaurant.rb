@@ -1,12 +1,10 @@
 class Restaurant < ApplicationRecord
 
   # Autocode: Callbacks
-    
-  # Autocode: Relationships
+    # Autocode: Relationships
   has_many :posts
-      belongs_to :user
-  
-  # Autocode: Accept Nested Attributes
+  belongs_to :user
+    # Autocode: Accept Nested Attributes
 
   # File Upload
 
@@ -14,6 +12,6 @@ class Restaurant < ApplicationRecord
   validates_presence_of :city
   validates_presence_of :name
 
-	# Soft Destroy
+  # Soft Destroy
 
 end

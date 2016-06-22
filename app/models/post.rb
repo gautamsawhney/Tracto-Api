@@ -1,13 +1,11 @@
 class Post < ApplicationRecord
 
   # Autocode: Callbacks
-    
-  # Autocode: Relationships
+    # Autocode: Relationships
   has_many :comments
-      belongs_to :user
-      belongs_to :restaurant
-  
-  # Autocode: Accept Nested Attributes
+  belongs_to :user
+  belongs_to :restaurant
+    # Autocode: Accept Nested Attributes
 
   # File Upload
 
@@ -15,6 +13,6 @@ class Post < ApplicationRecord
   validates_presence_of :title
   validates_presence_of :body
 
-	# Soft Destroy
+  # Soft Destroy
 
 end

@@ -1,21 +1,20 @@
 class User < ActiveRecord::Base
   enum roles: [:admin, :restaurant_owner, :mod]
   # Autocode: Callback
-def self.find_for_database_authentication(warden_conditions)
-      conditions = warden_conditions.dup.except(:password)
-      if login = conditions.delete(:login)
-        where(conditions.to_h).where(["lower(username) = :value OR lower(email) = :value", { :value => login.downcase }]).first
-      elsif conditions.has_key?(:username) || conditions.has_key?(:email)
-        where(conditions.to_h).first
-      end
+  def self.find_for_database_authentication(warden_conditions)
+    conditions = warden_conditions.dup.except(:password)
+    if login = conditions.delete(:login)
+      where(conditions.to_h).where(["lower(username) = :value OR lower(email) = :value", { :value => login.downcase }]).first
+    elsif conditions.has_key?(:username) || conditions.has_key?(:email)
+      where(conditions.to_h).first
     end
-    
-
+  end
+  
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
 
   devise :database_authenticatable, :registerable,
-        :recoverable, :rememberable, :trackable
+  :recoverable, :rememberable, :trackable
 
   # Autocode: Relationships
   has_many :comments
@@ -48,9 +47,9 @@ def self.find_for_database_authentication(warden_conditions)
   validates_presence_of     :password_confirmation, if: :password_required?
   validates_confirmation_of :password_confirmation, if: :password_required?
 
-	# Soft Destroy
+  # Soft Destroy
 
-	def password_required?
+  def password_required?
     return false if email.blank?
     !persisted? || !password.nil? || !password_confirmation.nil?
   end
