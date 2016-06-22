@@ -28,6 +28,7 @@ def self.find_for_database_authentication(warden_conditions)
   has_attached_file :image
 
   # Autocode: Validations
+  validates_presence_of :name
 
   validates_presence_of   :email, if: :email_required?
   validates_uniqueness_of :email, allow_blank: true, if: :email_changed?
