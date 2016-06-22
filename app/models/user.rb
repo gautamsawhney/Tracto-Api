@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+  enum roles: [:admin, :restaurant_owner, :mod]
   # Autocode: Callback
 def self.find_for_database_authentication(warden_conditions)
       conditions = warden_conditions.dup.except(:password)
