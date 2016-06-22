@@ -11,6 +11,7 @@ class Restaurant < ApplicationRecord
   # File Upload
 
   # Autocode: Validations
+  validates_presence_of :city
   validates_presence_of :name
 
 	# Soft Destroy
